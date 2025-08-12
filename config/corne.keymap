@@ -29,9 +29,9 @@
     lower_layer {
       display-name = "Lower";
       bindings = <
-        &kp ESC     &mmv MOVE_LEFT &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT   &mkp LCLK &kb PLUS  &kp N7 &kp N8  &kp N7 &trans &kp DEL
-        &kp KP_NLCK &kp LEFT       &kp DOWN          &kp UP          &kp RIGHT         &mkp RCLK &kb MINUS &kp N4 &kp N5  &kp N6 &trans &kp RET
-        &kp LCTRL   &kp Z          &kp K_SCROLL_DOWN &kp K_SCROLL_UP &kp D             &mkp MCLK &kb N0    &kp N1 &kp N2  &kp N3 &trans &kp RGUI
+        &kp ESC     &mmv MOVE_LEFT &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT   &mkp LCLK &kp PLUS  &kp N7 &kp N8  &kp N7 &trans &kp DEL
+        &kp KP_NLCK &kp LEFT       &kp DOWN          &kp UP          &kp RIGHT         &mkp RCLK &kp MINUS &kp N4 &kp N5  &kp N6 &trans &kp RET
+        &kp LCTRL   &kp Z          &kp K_SCROLL_DOWN &kp K_SCROLL_UP &kp D             &mkp MCLK &kp N0    &kp N1 &kp N2  &kp N3 &trans &kp RGUI
         &kp LSHFT   &trans         &kp SPACE         &kp RET         &mo 3             &kp RALT
       >;
     };
