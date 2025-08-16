@@ -24,10 +24,10 @@
         default_layer {
             display-name = "Base"; // Colemak DH + JK swapped (Vim up/down)
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp F         &kp P  &kp B             &kp K      &kp L  &kp U      &kp Y    &kp UNDER  &kp BSPC
-&kp TAB    &kp A  &kp R  &kp S         &kp T  &kp G             &kp M      &kp N  &kp E      &kp I    &kp O      &kp RET
-&kp LCTRL  &kp Z  &kp X  &kp C         &kp D  &kp V             &kp J      &kp H  &kp COMMA  &kp DOT  &kp FSLH   &kp COLON
-                         &kp LEFT_GUI  &mo 1  &kp LEFT_SHIFT    &kp SPACE  &mo 2  &kp RALT
+&kp ESC    &kp Q  &kp W  &kp F         &kp P  &kp G             &kp K      &kp L  &kp U      &kp Y    &kp UNDER  &kp BSPC
+&kp TAB    &kp A  &kp R  &kp S         &kp T  &kp D             &kp H      &kp N  &kp E      &kp I    &kp O      &kp RET
+&kp LCTRL  &kp Z  &kp X  &kp C         &kp V  &kp B             &kp J      &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp COLON
+                         &kp LEFT_SHIFT  &mo 1  &kp SPACE    &kp RIGHT_GUI  &mo 2  &kp RALT
             >;
         };
 
@@ -37,7 +37,7 @@
 &kp ESC      &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_UP     &mmv MOVE_RIGHT  &mkp LCLK         &kp PLUS   &kp N7  &kp N8    &kp N7  &kp DEL  &kp BSPC
 &kp KP_NLCK  &kp LEFT        &kp DOWN           &kp UP           &kp RIGHT        &mkp RCLK         &trans     &kp N4  &kp N5    &kp N6  &trans   &kp RET
 &kp LCTRL    &trans          &kp K_SCROLL_DOWN  &kp K_SCROLL_UP  &trans           &mkp MCLK         &kp MINUS  &kp N1  &kp N2    &kp N3  &kp N0   &kp RGUI
-                                                &kp LEFT_GUI     &trans           &kp LEFT_SHIFT    &kp SPACE  &mo 3   &kp RALT
+                                                &kp LEFT_GUI     &trans           &kp LEFT_SHIFT    &kp RIGHT_GUI  &mo 3   &kp RALT
             >;
         };
 
