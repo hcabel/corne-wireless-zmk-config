@@ -1,4 +1,3 @@
-
 /*
 * Copyright (c) 2020 The ZMK Contributors
 *
@@ -26,20 +25,29 @@
     };
   };
 
+  combos {
+    compatible = "zmk,combos";
+
+    esc_combo {
+      bindings = <&kp ESC>;
+      key-positions = <19 20>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
-    default_layer {
+    base {
       display-name = "Base"; // Colemak + JK swapped (Vim up/down)
       bindings = <
-        &kp ESC                &kp Q  &kp W  &kp F           &kp P  &kp G        &kp K          &kp L  &kp U      &kp Y    &kp UNDER  &kp BSPC
-        &Tab_Gui LEFT_GUI TAB  &kp A  &kp R  &kp S           &kp T  &kp D        &kp H          &kp N  &kp E      &kp I    &kp O      &kp RET
-        &kp LCTRL              &kp Z  &kp X  &kp C           &kp V  &kp B        &kp J          &kp M  &kp SLASH  &kp DOT  &kp COLON  &kp RCTRL
+        &kp ESC                &kp Q  &kp W  &kp F           &kp P  &kp B        &kp K          &kp L  &kp U      &kp Y    &kp UNDER  &kp BSPC
+        &Tab_Gui LEFT_GUI TAB  &kp A  &kp R  &kp S           &kp T  &kp G        &kp M          &kp N  &kp E      &kp I    &kp O      &kp RET
+        &kp LCTRL              &kp Z  &kp X  &kp C           &kp D  &kp V        &kp J          &kp H  &kp SLASH  &kp DOT  &kp COLON  &kp RCTRL
         &kp LEFT_SHIFT  &mo 1  &kp SPACE    &kp RIGHT_GUI  &mo 2  &kp RALT
       >;
     };
 
-    lower_layer {
+    numpads {
       display-name = "Lower";
       bindings = <
         &kp ESC      &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_UP     &mmv MOVE_RIGHT  &mkp LCLK    &kp PLUS       &kp N7  &kp N8    &kp N9  &kp DEL  &kp BSPC
@@ -49,7 +57,7 @@
       >;
     };
 
-    raise_layer {
+    symbols {
       display-name = "Raise";
       bindings = <
         &kp ESC    &kp GRAVE          &kp EXCL          &kp AT          &kp HASH              &kp CARET        &kp DOLLAR     &kp PERCENT            &kp KP_MULTIPLY  &none     &kp DEL        &kp BSPC
@@ -74,3 +82,4 @@
     extra_3 { status = "reserved"; };
   };
 };
+
