@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-toggle-layer";
             label = "TOGGLELAYER";
             #binding-cells = <1>;
-            toggle-mode = "on";
+            toggle-mode = "flip";
         };
     };
 
@@ -38,7 +38,7 @@
         esc_combo {
             bindings = <&kp ESC>;
             key-positions = <19 20>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
         };
     };
 
@@ -48,14 +48,17 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS &kp GT>;
             label = "ARROWPTR";
+            tap-ms = <5>;
         };
 
         // Draw a kitty
+
         Kitty: Kitty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RET>;
             label = "KITTY";
+            tap-ms = <0>;
         };
     };
 
@@ -76,7 +79,7 @@
             display-name = "Lower";
             bindings = <
 &kp ESC      &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_UP     &mmv MOVE_RIGHT  &mkp LCLK    &kp PLUS       &kp N7  &kp N8    &kp N9  &kp DEL  &kp BSPC
-&kp KP_NLCK  &kp LEFT        &kp DOWN           &kp UP           &kp RIGHT        &mkp RCLK    &kp EQUAL      &kp N4  &kp N5    &kp N6  &none    &none
+&kp KP_NLCK  &kp LEFT        &kp DOWN           &kp UP           &kp RIGHT        &mkp RCLK    &kp EQUAL      &kp N4  &kp N5    &kp N6  &none    &trans
 &kp LCTRL    &none           &kp K_SCROLL_DOWN  &kp K_SCROLL_UP  &none            &mkp MCLK    &kp MINUS      &kp N1  &kp N2    &kp N3  &kp N0   &none
                                                 &kp LEFT_SHIFT   &none            &kp SPACE    &kp RIGHT_GUI  &mo 3   &kp RALT
             >;
@@ -86,7 +89,7 @@
             display-name = "Raise";
             bindings = <
 &kp ESC    &kp GRAVE          &kp EXCL          &kp AT          &kp HASH              &kp CARET        &kp DOLLAR     &kp PERCENT            &kp KP_MULTIPLY  &none      &kp DEL        &kp BSPC
-&kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND    &kp PIPE       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp BACKSLASH  &none
+&kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND    &kp PIPE       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp BACKSLASH  &trans
 &kp LCTRL  &kp SINGLE_QUOTE   &none             &none           &kp LT                &none            &none          &kp GREATER_THAN       &kp COMMA        &ArrowPtr  &kp SEMI       &kp RCTRL
                                                 &kp LEFT_SHIFT  &mo 3                 &kp SPACE        &kp RIGHT_GUI  &trans                 &kp RALT
             >;
@@ -111,8 +114,6 @@
                                          &kp LEFT_SHIFT  &mo 1  &TwoKeyPress LCTRL SPACE    &kp RCTRL  &mo 2  &kp RALT
             >;
         };
-
-        extra_3 { status = "reserved"; };
     };
 };
 
