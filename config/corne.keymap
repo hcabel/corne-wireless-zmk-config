@@ -23,13 +23,6 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
-
-        ToggleLayer: ToggleLayer {
-            compatible = "zmk,behavior-toggle-layer";
-            label = "TOGGLELAYER";
-            #binding-cells = <1>;
-            toggle-mode = "flip";
-        };
     };
 
     combos {
@@ -53,7 +46,7 @@
 
         // Draw a kitty
 
-        kitty: kitty {
+        Kitty: kitty {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp BSLH &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp FSLH &kp BSLH &kp LS(RET) &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp RPAR &kp SPACE &kp SPACE &kp LPAR &kp SPACE &kp SQT &kp RPAR &kp LS(RET) &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp LPAR &kp SPACE &kp SPACE &kp FSLH &kp SPACE &kp SPACE &kp RPAR &kp LS(RET) &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp SPACE &kp BSLH &kp LPAR &kp UNDER &kp UNDER &kp RPAR &kp PIPE &kp LS(RET)>;
@@ -87,20 +80,20 @@
         symbols {
             display-name = "Raise";
             bindings = <
-&trans     &kp GRAVE          &kp EXCL          &kp AT          &kp HASH              &kp CARET        &kp DOLLAR     &kp PERCENT            &kp KP_MULTIPLY  &none      &kp DEL        &trans
-&kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND    &kp PIPE       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp BACKSLASH  &trans
-&trans     &kp SINGLE_QUOTE   &none             &none           &kp LT                &none            &none          &kp GREATER_THAN       &kp COMMA        &ArrowPtr  &kp SEMI       &trans
-                                                &kp LEFT_SHIFT  &mo 3                 &kp SPACE        &kp RIGHT_GUI  &trans                 &kp RALT
+&trans     &kp GRAVE          &kp EXCL          &kp AT          &kp HASH              &kp CARET        &kp DOLLAR  &kp PERCENT            &kp KP_MULTIPLY  &none      &kp DEL        &trans
+&kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND    &kp PIPE    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp BACKSLASH  &trans
+&trans     &kp SINGLE_QUOTE   &none             &none           &kp LT                &none            &none       &kp GREATER_THAN       &kp COMMA        &ArrowPtr  &kp SEMI       &trans
+                                                &kp LEFT_SHIFT  &mo 3                 &kp SPACE        &trans      &trans                 &kp RALT
             >;
         };
 
         config_layer {
             display-name = "Config";
             bindings = <
-&ToggleLayer 4  &trans        &trans        &trans        &trans        &kp C_BRI_UP            &kp C_VOL_UP  &trans  &trans  &trans  &trans   &Kitty
-&kp F11         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                  &kp F6        &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp C_BRIGHTNESS_DEC    &kp C_VOL_DN  &trans  &trans  &trans  &trans   &trans
-                                            &trans        &trans        &trans                  &trans        &trans  &trans
+&to 4         &trans        &trans        &trans        &trans        &kp C_BRI_UP            &kp C_VOL_UP  &trans  &trans  &trans  &trans   &Kitty
+&kp F11       &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                  &kp F6        &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp C_BRIGHTNESS_DEC    &kp C_VOL_DN  &trans  &trans  &trans  &trans   &trans
+                                          &trans        &trans        &trans                  &trans        &trans  &trans
             >;
         };
 
@@ -109,10 +102,9 @@
             bindings = <
 &kp ESC                    &kp Q  &kp W  &kp E           &kp R  &kp T                       &kp Y      &kp U  &kp I      &kp O    &kp P      &kp BSPC
 &TwoKeyPress LEFT_GUI TAB  &kp A  &kp S  &kp D           &kp F  &kp G                       &kp H      &kp J  &kp K      &kp L    &kp SEMI   &TwoKeyPress RIGHT_GUI RETURN
-&kp LCTRL                  &kp Z  &kp X  &kp C           &kp V  &kp B                       &kp N      &kp M  &kp COMMA  &kp DOT  &kp COLON  &ToggleLayer 4
+&kp LCTRL                  &kp Z  &kp X  &kp C           &kp V  &kp B                       &kp N      &kp M  &kp COMMA  &kp DOT  &kp COLON  &to 0
                                          &kp LEFT_SHIFT  &mo 1  &TwoKeyPress LCTRL SPACE    &kp RCTRL  &mo 2  &kp RALT
             >;
         };
     };
 };
-
