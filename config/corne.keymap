@@ -78,9 +78,9 @@
         symbols {
             display-name = "Raise";
             bindings = <
-&trans     &kp GRAVE          &kp EXCL          &kp AT          &kp HASH              &kp CARET        &kp DOLLAR  &kp PERCENT            &kp KP_MULTIPLY  &none      &kp DELETE     &trans
-&kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND    &kp PIPE    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT   &kp BACKSLASH  &trans
-&trans     &kp SINGLE_QUOTE   &none             &none           &kp LT                &none            &GoEqual    &kp GREATER_THAN       &kp COMMA        &ArrowPtr  &kp SEMI       &kp BACKSLASH
+&trans     &kp GRAVE          &kp EXCL          &kp AT          &kp HASH              &kp CARET        &kp DOLLAR  &kp ASTERISK           &kp PERCENT      &kp QUESTION  &kp DELETE     &trans
+&kp TILDE  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND    &kp PIPE    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT      &kp BACKSLASH  &trans
+&trans     &kp SINGLE_QUOTE   &none             &none           &kp LT                &none            &GoEqual    &kp GREATER_THAN       &kp COMMA        &ArrowPtr     &kp SEMI       &kp BACKSLASH
                                                 &kp LEFT_SHIFT  &mo 3                 &kp SPACE        &trans      &trans                 &kp RALT
             >;
         };
